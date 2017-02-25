@@ -3,6 +3,11 @@ api_version: 1
 threadsafe: yes
 
 handlers:
+
+- url: /favicon\.ico
+  static_files: images/favicon.ico
+  upload: images/favicon\.ico
+
 - url: /
   script: main.app
   
@@ -14,7 +19,7 @@ handlers:
   
 - url: /(.*\.(gif|png|jpg|ico))$
   static_files: images/\1
-  upload: static/.*\.(gif|png|jpg|ico)$
+  upload: images/.*\.(gif|png|jpg|ico)$
   
 - url: /css
   static_dir: css
@@ -26,7 +31,7 @@ handlers:
   static_files: update/\1
   upload: update/.*\.(bin)$
   
-- url: .*
+- url: /.*
   script: main.app
 
 libraries:
