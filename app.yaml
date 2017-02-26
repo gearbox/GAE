@@ -1,4 +1,5 @@
 runtime: python27
+application: gearIoT-Air
 api_version: 1
 threadsafe: yes
 
@@ -10,17 +11,17 @@ handlers:
 
 - url: /
   script: main.app
-  
+
 - url: /index\.html
   script: main.app
-  
+
 - url: /images
   static_dir: images
-  
+
 - url: /(.*\.(gif|png|jpg|ico))$
   static_files: images/\1
   upload: images/.*\.(gif|png|jpg|ico)$
-  
+
 - url: /css
   static_dir: css
 
@@ -30,7 +31,7 @@ handlers:
 - url: /(.*\.(bin))$
   static_files: update/\1
   upload: update/.*\.(bin)$
-  
+
 - url: /.*
   script: main.app
 
