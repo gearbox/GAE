@@ -1,5 +1,5 @@
 runtime: python27
-application: gearIoT-Air
+application: geariot-air
 api_version: 1
 threadsafe: yes
 
